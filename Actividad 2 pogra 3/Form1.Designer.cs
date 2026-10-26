@@ -30,13 +30,13 @@
         {
             lblmatricula = new Label();
             txtmatricula = new TextBox();
-            textBox1 = new TextBox();
+            txtnombre = new TextBox();
             lblnombre = new Label();
             txtgrupo = new TextBox();
             lblgrupo = new Label();
             nudsemestre = new NumericUpDown();
             lblsemestre = new Label();
-            textBox2 = new TextBox();
+            txtespecialidad = new TextBox();
             lblespecialidad = new Label();
             btnguardar = new Button();
             btnmostrar = new Button();
@@ -62,12 +62,12 @@
             txtmatricula.Size = new Size(100, 23);
             txtmatricula.TabIndex = 1;
             // 
-            // textBox1
+            // txtnombre
             // 
-            textBox1.Location = new Point(128, 93);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 3;
+            txtnombre.Location = new Point(128, 93);
+            txtnombre.Name = "txtnombre";
+            txtnombre.Size = new Size(100, 23);
+            txtnombre.TabIndex = 3;
             // 
             // lblnombre
             // 
@@ -113,12 +113,12 @@
             lblsemestre.TabIndex = 7;
             lblsemestre.Text = "Semestre";
             // 
-            // textBox2
+            // txtespecialidad
             // 
-            textBox2.Location = new Point(366, 137);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 9;
+            txtespecialidad.Location = new Point(366, 137);
+            txtespecialidad.Name = "txtespecialidad";
+            txtespecialidad.Size = new Size(100, 23);
+            txtespecialidad.TabIndex = 9;
             // 
             // lblespecialidad
             // 
@@ -137,6 +137,7 @@
             btnguardar.TabIndex = 10;
             btnguardar.Text = "Guardar";
             btnguardar.UseVisualStyleBackColor = true;
+            btnguardar.Click += btnguardar_Click;
             // 
             // btnmostrar
             // 
@@ -146,6 +147,7 @@
             btnmostrar.TabIndex = 11;
             btnmostrar.Text = "Mostrar";
             btnmostrar.UseVisualStyleBackColor = true;
+            btnmostrar.Click += btnmostrar_Click;
             // 
             // btnlimpiar
             // 
@@ -155,6 +157,7 @@
             btnlimpiar.TabIndex = 12;
             btnlimpiar.Text = "Limpiar";
             btnlimpiar.UseVisualStyleBackColor = true;
+            btnlimpiar.Click += btnlimpiar_Click;
             // 
             // dgv
             // 
@@ -177,18 +180,19 @@
             Controls.Add(btnlimpiar);
             Controls.Add(btnmostrar);
             Controls.Add(btnguardar);
-            Controls.Add(textBox2);
+            Controls.Add(txtespecialidad);
             Controls.Add(lblespecialidad);
             Controls.Add(lblsemestre);
             Controls.Add(nudsemestre);
             Controls.Add(txtgrupo);
             Controls.Add(lblgrupo);
-            Controls.Add(textBox1);
+            Controls.Add(txtnombre);
             Controls.Add(lblnombre);
             Controls.Add(txtmatricula);
             Controls.Add(lblmatricula);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)nudsemestre).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgv).EndInit();
             ResumeLayout(false);
@@ -199,13 +203,13 @@
 
         private Label lblmatricula;
         private TextBox txtmatricula;
-        private TextBox textBox1;
+        private TextBox txtnombre;
         private Label lblnombre;
         private TextBox txtgrupo;
         private Label lblgrupo;
         private NumericUpDown nudsemestre;
         private Label lblsemestre;
-        private TextBox textBox2;
+        private TextBox txtespecialidad;
         private Label lblespecialidad;
         private Button btnguardar;
         private Button btnmostrar;
