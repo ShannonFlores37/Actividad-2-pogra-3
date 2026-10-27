@@ -129,17 +129,16 @@ namespace Actividad_2_pogra_3
 
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
-            using (OleDbConnection conexion = ConexionBD.ObtenerConexion())
-            {
-                conexion.Open();
-                string consulta =
-                    "DELETE FROM alumnos" +
-                    " WHERE id_alumno = ?";
-                using (OleDbCommand comando = new OleDbCommand(consulta, conexion))
-                {
+            LimpiarCampos();
+        }
 
-                }
-            }
+        private void LimpiarCampos()
+        {
+            txtmatricula.Clear();
+            txtnombre.Clear();
+            nudsemestre.Value = 1;
+            txtgrupo.Clear();
+            txtespecialidad.Clear();
         }
     }
 }
